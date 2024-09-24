@@ -14,14 +14,6 @@ const UserPanel: React.FC<UserPanelProps> = ({ user, onLogout }) => {
     <div>
       <Navigation user={user} onLogout={onLogout} />
       <div className="p-4">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Bienvenido, {user?.displayName || 'Usuario'}</h1>
-        <p className="text-gray-600 mb-4">Tu correo electrónico: {user?.email}</p>
-        <button
-          className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
-          onClick={onLogout}
-        >
-          Cerrar sesión
-        </button>
         <TrazabilidadMinerales />
       </div>
     </div>
