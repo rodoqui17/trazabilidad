@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithPopup, User } from "firebase/auth";
 import UserPanel from "./Dashboard"; // Asegúrate de que la ruta sea correcta
 
 const firebaseConfig = {
@@ -18,11 +18,11 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 const LandingPage = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState<User | null>(null); // Type user state as User | null
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
-      setUser(user);
+      setUser(user); // No more type errors
     });
 
     return () => unsubscribe();
@@ -31,7 +31,7 @@ const LandingPage = () => {
   const handleLogin = async () => {
     try {
       const result = await signInWithPopup(auth, provider);
-      setUser(result.user);
+      setUser(result.user); // Set the user after login
     } catch (error) {
       console.error(error);
     }
@@ -40,7 +40,7 @@ const LandingPage = () => {
   const handleLogout = async () => {
     try {
       await auth.signOut();
-      setUser(null);
+      setUser(null); // Clear the user on logout
     } catch (error) {
       console.error(error);
     }
