@@ -1,31 +1,38 @@
+import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-function Navigation({ user, onLogout }) {
+import { User } from "firebase/auth"; // Import User type from Firebase
+
+interface NavigationProps {
+  user: User | null; // The user can be either a Firebase User or null
+  onLogout: () => void; // Logout is a function that returns void
+}
+
+const Navigation: React.FC<NavigationProps> = ({ user, onLogout }) => {
   return (
     <Navbar bg="dark" data-bs-theme="dark">
       <Container>
         <Navbar.Brand href="#home">
-        <Nav.Link href="#image">
-              {user.photoURL ? (
-                <img
-                  src={user.photoURL}
-                  alt="User Avatar"
-                  style={{ width: "40px", height: "40px", borderRadius: "50%" }}
-                />
-              ) : (
-                <span>No Image</span>
-              )}
-            </Nav.Link>
+          <Nav.Link href="#image">
+            {user?.photoURL ? (
+              <img
+                src={user.photoURL}
+                alt="User Avatar"
+                style={{ width: "40px", height: "40px", borderRadius: "50%" }}
+              />
+            ) : (
+              <span>No Image</span>
+            )}
+          </Nav.Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            {" "}
-            {/* Usar ms-auto para alinear a la derecha */}
+            {/* Use ms-auto to align to the right */}
             <Nav.Link href="#profile">
-              {user.displayName} {/* Mostrar el nombre del usuario */}
+              {user?.displayName || "Usuario"} {/* Show user's name or fallback */}
             </Nav.Link>
         
             <NavDropdown title="Opciones" id="basic-nav-dropdown">
@@ -43,6 +50,6 @@ function Navigation({ user, onLogout }) {
       </Container>
     </Navbar>
   );
-}
+};
 
 export default Navigation;
