@@ -1,6 +1,5 @@
 // UserPanel.js
 import React from "react";
-import { Button } from "react-bootstrap";
 import Navigation from "./Navbar";
 import TrazabilidadMinerales from "./components/panel";
 const UserPanel = ({ user, onLogout }) => {
