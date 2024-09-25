@@ -15,8 +15,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "SupplyMine",
-  description: "Trazabilidad de Minerales",
+  title: "GemaChain",
+  description: "Trazabilidad de Joyas",
 };
 
 export default function RootLayout({
