@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup, User } from "firebase/auth";
 import UserPanel from "./Dashboard"; // Asegúrate de que la ruta sea correcta
-import Carousel from "./carrousel";
+import Carousel from "./Carousel";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,

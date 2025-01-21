@@ -2,7 +2,7 @@ import React from "react";
 import { User } from "firebase/auth";
 import Navigation from "./Navbar";
 import TrazabilidadMinerales from "./components/panel";
-import Carousel from "./carrousel";
+import Carousel from "./Carousel";
 // import {UAParser} from "ua-parser-js";
 
 interface UserPanelProps {
