@@ -15,8 +15,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "GemaChain",
-  description: "Trazabilidad de Joyas",
+  title: "CryptoDay",
+  description: "Tu espacio de aprendizaje sobre criptomonedas",
 };
 
 export default function RootLayout({
