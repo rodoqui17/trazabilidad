@@ -11,6 +11,8 @@ import {
   FaBroadcastTower,
   FaTools,
   FaWallet,
+  FaCode,
+  FaDiscord
 } from "react-icons/fa";
 
 const TrazabilidadMinerales = () => {
@@ -174,6 +176,15 @@ const TrazabilidadMinerales = () => {
           <li className="flex items-center space-x-2">
             <FaWallet />
             <span>Wallet</span>
+          </li>
+          <li className="flex items-center space-x-2">
+            <FaCode  />
+            <span>API</span>
+            <FaCrown className="text-yellow-500" title="Recurso de pago" />
+          </li>
+          <li className="flex items-center space-x-2">
+            <FaDiscord />
+            <span>Discord</span>
           </li>
         </ul>
       </aside>
