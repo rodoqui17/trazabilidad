@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup, User } from "firebase/auth";
 import UserPanel from "./Dashboard"; // Asegúrate de que la ruta sea correcta
+import Carousel from "./carrousel";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -66,14 +67,8 @@ const LandingPage = () => {
   </header>
 
   {/* Hero Section */}
-  {/* <section className="bg-cover bg-center h-screen flex items-center justify-center text-center" style={{ backgroundImage: 'url("https://example.com/education-background.jpg")' }}>
-    <div className="bg-black bg-opacity-60 p-16 rounded-lg">
-      <h1 className="text-6xl font-bold text-white mb-4">Aprende Web3 y Blockchain como un Experto</h1>
-      <p className="text-2xl text-gray-200 mb-8">Desbloquea tu potencial con los conocimientos más innovadores en tecnología financiera y descentralizada.</p>
-      <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-10 rounded-lg transition duration-300">Comienza ahora</button>
-    </div>
-  </section> */}
-
+ 
+< Carousel/>
   {/* Features Section */}
   <section id="features" className="py-20 bg-black text-white">
   <div className="container mx-auto text-center">

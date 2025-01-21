@@ -2,6 +2,7 @@ import React from "react";
 import { User } from "firebase/auth";
 import Navigation from "./Navbar";
 import TrazabilidadMinerales from "./components/panel";
+import Carousel from "./carrousel";
 // import {UAParser} from "ua-parser-js";
 
 interface UserPanelProps {
@@ -40,7 +41,7 @@ const UserPanel: React.FC<UserPanelProps> = ({ user, onLogout }) => {
         {/* <h5>Firebase ID: {user?.uid}</h5>
         <h5>Device Info: {deviceInfo}</h5>
         <h5>IP Address: {ipAddress}</h5> */}
-        
+        <Carousel />
         <TrazabilidadMinerales />
       </div>
     </div>
