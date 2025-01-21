@@ -7,6 +7,9 @@ import {
   FaWrench,
   FaVideo,
   FaChevronDown,
+  FaCrown,
+  FaBroadcastTower,
+  FaTools
 } from "react-icons/fa";
 
 const TrazabilidadMinerales = () => {
@@ -142,6 +145,7 @@ const TrazabilidadMinerales = () => {
                 <li className="flex items-center space-x-2">
                   <FaSearch />
                   <span>Investigaciones</span>
+                  <FaCrown className="text-yellow-500" title="Recurso de pago" />
                 </li>
                 <li className="flex items-center space-x-2">
                   <FaWrench />
@@ -153,6 +157,15 @@ const TrazabilidadMinerales = () => {
                 </li>
               </ul>
             )}
+          </li>
+          <li className="flex items-center space-x-2">
+            <FaBroadcastTower />
+            <span>Webinars</span>
+            <FaCrown className="text-yellow-500" title="Recurso de pago" />
+          </li>
+          <li className="flex items-center space-x-2">
+            <FaTools />
+            <span>Herramientas</span>
           </li>
         </ul>
       </aside>
