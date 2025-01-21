@@ -10,8 +10,8 @@ interface UserPanelProps {
 }
 
 const UserPanel: React.FC<UserPanelProps> = ({ user, onLogout }) => {
-  // const [ipAddress, setIpAddress] = useState<string | null>(null);
-  // const [deviceInfo, setDeviceInfo] = useState<string | null>(null);
+  const [ipAddress, setIpAddress] = useState<string | null>(null);
+  const [deviceInfo, setDeviceInfo] = useState<string | null>(null);
 
   useEffect(() => {
     // Fetch IP address
@@ -37,10 +37,10 @@ const UserPanel: React.FC<UserPanelProps> = ({ user, onLogout }) => {
     <div>
       <Navigation user={user} onLogout={onLogout} />
       <div className="p-0">
-        {/* <h2>Firebase ID: {user?.uid}</h2>
-        <h2>Device Info: {deviceInfo}</h2>
-        <h2>IP Address: {ipAddress}</h2>
-         */}
+        <h5>Firebase ID: {user?.uid}</h5>
+        <h5>Device Info: {deviceInfo}</h5>
+        <h5>IP Address: {ipAddress}</h5>
+        
         <TrazabilidadMinerales />
       </div>
     </div>
