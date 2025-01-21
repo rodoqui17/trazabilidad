@@ -10,8 +10,8 @@ interface UserPanelProps {
 }
 
 const UserPanel: React.FC<UserPanelProps> = ({ user, onLogout }) => {
-  const [ipAddress, setIpAddress] = useState<string | null>(null);
-  const [deviceInfo, setDeviceInfo] = useState<string | null>(null);
+  // const [ipAddress, setIpAddress] = useState<string | null>(null);
+  // const [deviceInfo, setDeviceInfo] = useState<string | null>(null);
 
   useEffect(() => {
     // Fetch IP address
