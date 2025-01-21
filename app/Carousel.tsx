@@ -24,7 +24,7 @@ const Carousel = () => {
 
   return (
     <section className="relative bg-black text-white py-20">
-      <h2 className="text-4xl font-bold text-center mb-10">Top 10 más vistos</h2>
+      <h2 className="text-4xl font-bold text-center mb-10">Top 5 más vistos</h2>
       <Slider {...settings}>
         {videos.map((video, index) => (
           <div key={index} className="bg-gray-800 rounded-lg shadow-lg p-6">
