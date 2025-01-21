@@ -15,7 +15,8 @@ const Navigation: React.FC<NavigationProps> = ({ user, onLogout }) => {
     <Navbar bg="dark" data-bs-theme="dark">
       <Container>
         <Navbar.Brand href="#home">
-          <Nav.Link href="#image">
+                  
+           <Nav.Link href="#image">
             {user?.photoURL ? (
               <img
                 src={user.photoURL}
@@ -25,7 +26,7 @@ const Navigation: React.FC<NavigationProps> = ({ user, onLogout }) => {
             ) : (
               <span>No Image</span>
             )}
-          </Nav.Link>
+          </Nav.Link> 
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

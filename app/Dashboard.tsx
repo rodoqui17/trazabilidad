@@ -1,19 +1,46 @@
-import React from "react";
-import { User } from "firebase/auth"; // Import User type from Firebase
+import React, { useEffect, useState } from "react";
+import { User } from "firebase/auth";
 import Navigation from "./Navbar";
 import TrazabilidadMinerales from "./components/panel";
+import {UAParser} from "ua-parser-js";
 
-// Define types for the props
 interface UserPanelProps {
-  user: User | null; // user can be a Firebase User or null
-  onLogout: () => void; // onLogout is a function with no arguments that returns void
+  user: User | null;
+  onLogout: () => void;
 }
 
 const UserPanel: React.FC<UserPanelProps> = ({ user, onLogout }) => {
+  const [ipAddress, setIpAddress] = useState<string | null>(null);
+  const [deviceInfo, setDeviceInfo] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Fetch IP address
+    const fetchIpAddress = async () => {
+      try {
+        const response = await fetch("https://api64.ipify.org?format=json");
+        const data = await response.json();
+        setIpAddress(data.ip);
+      } catch (error) {
+        console.error("Error fetching IP address:", error);
+      }
+    };
+
+    // Extract device information
+    const parser = new UAParser();
+    const device = parser.getResult();
+    setDeviceInfo(`${device.os.name} - ${device.browser.name}`);
+
+    fetchIpAddress();
+  }, []);
+
   return (
     <div>
       <Navigation user={user} onLogout={onLogout} />
-      <div className="p-4">
+      <div className="p-0">
+        {/* <h2>Firebase ID: {user?.uid}</h2>
+        <h2>Device Info: {deviceInfo}</h2>
+        <h2>IP Address: {ipAddress}</h2>
+         */}
         <TrazabilidadMinerales />
       </div>
     </div>

@@ -53,12 +53,12 @@ const LandingPage = () => {
     {/* Header */}
     <header className="bg-blue-900 text-white py-4">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-3xl font-bold">Minerum</h1>
+        <h1 className="text-3xl font-bold">CryptoDay</h1>
         <nav>
           <ul className="flex space-x-6">
-            <li><a href="#features" className="hover:text-gray-300">Features</a></li>
-            <li><a href="#about" className="hover:text-gray-300">About</a></li>
-            <li><a href="#contact" className="hover:text-gray-300">Contact</a></li>
+            <li><a href="#features" className="hover:text-gray-300">Nosotros</a></li>
+            <li><a href="#about" className="hover:text-gray-300">Proyecto</a></li>
+            <li><a href="#contact" className="hover:text-gray-300">Login</a></li>
           </ul>
         </nav>
       </div>
