@@ -10,8 +10,8 @@ interface UserPanelProps {
 }
 
 const UserPanel: React.FC<UserPanelProps> = ({ user, onLogout }) => {
-  const [ipAddress, setIpAddress] = useState<string | null>(null);
-  const [deviceInfo, setDeviceInfo] = useState<string | null>(null);
+  // const [ipAddress, setIpAddress] = useState<string | null>(null);
+  // const [deviceInfo, setDeviceInfo] = useState<string | null>(null);
 
   useEffect(() => {
     // Fetch IP address
@@ -19,7 +19,7 @@ const UserPanel: React.FC<UserPanelProps> = ({ user, onLogout }) => {
       try {
         const response = await fetch("https://api64.ipify.org?format=json");
         const data = await response.json();
-        setIpAddress(data.ip);
+        // setIpAddress(data.ip);
       } catch (error) {
         console.error("Error fetching IP address:", error);
       }
@@ -28,7 +28,7 @@ const UserPanel: React.FC<UserPanelProps> = ({ user, onLogout }) => {
     // Extract device information
     const parser = new UAParser();
     const device = parser.getResult();
-    setDeviceInfo(`${device.os.name} - ${device.browser.name}`);
+    // setDeviceInfo(`${device.os.name} - ${device.browser.name}`);
 
     fetchIpAddress();
   }, []);
@@ -37,9 +37,9 @@ const UserPanel: React.FC<UserPanelProps> = ({ user, onLogout }) => {
     <div>
       <Navigation user={user} onLogout={onLogout} />
       <div className="p-0">
-        <h5>Firebase ID: {user?.uid}</h5>
+        {/* <h5>Firebase ID: {user?.uid}</h5>
         <h5>Device Info: {deviceInfo}</h5>
-        <h5>IP Address: {ipAddress}</h5>
+        <h5>IP Address: {ipAddress}</h5> */}
         
         <TrazabilidadMinerales />
       </div>
