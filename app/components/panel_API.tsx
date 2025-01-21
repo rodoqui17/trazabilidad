@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { FaCalendarAlt, FaBook, FaFileAlt, FaSearch, FaWrench, FaVideo, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaCalendarAlt, FaBook, FaFileAlt, FaSearch, FaWrench, FaVideo, FaChevronDown} from "react-icons/fa";
 
 const TrazabilidadMinerales = () => {
   const [menuAbierto, setMenuAbierto] = useState(false);
