@@ -1,5 +1,13 @@
 import { useState } from "react";
-import { FaCalendarAlt, FaBook, FaFileAlt, FaSearch, FaWrench, FaVideo, FaChevronDown } from "react-icons/fa";
+import {
+  FaCalendarAlt,
+  FaBook,
+  FaFileAlt,
+  FaSearch,
+  FaWrench,
+  FaVideo,
+  FaChevronDown,
+} from "react-icons/fa";
 
 const TrazabilidadMinerales = () => {
   const [menuAbierto, setMenuAbierto] = useState(false);
@@ -10,76 +18,85 @@ const TrazabilidadMinerales = () => {
     {
       id: 1,
       titulo: "Introducción a Web3",
-      descripcion: "Aprende sobre los conceptos básicos de Web3, sus aplicaciones y cómo está cambiando la web.",
+      descripcion:
+        "Aprende sobre los conceptos básicos de Web3, sus aplicaciones y cómo está cambiando la web.",
       url: "https://www.coindesk.com/learn/what-is-web3/",
-      youtubeVideoId: "N_Dwhubt9Bk"
+      youtubeVideoId: "N_Dwhubt9Bk",
     },
     {
       id: 2,
       titulo: "Blockchain y Web3",
-      descripcion: "Descubre cómo la tecnología blockchain es la base de Web3 y cómo permite la descentralización.",
+      descripcion:
+        "Descubre cómo la tecnología blockchain es la base de Web3 y cómo permite la descentralización.",
       url: "https://www.ibm.com/topics/what-is-blockchain",
-      youtubeVideoId: "SSo_EIwHSd4"
+      youtubeVideoId: "SSo_EIwHSd4",
     },
     {
       id: 3,
       titulo: "Ethereum y Smart Contracts",
-      descripcion: "Explora Ethereum y su uso para crear contratos inteligentes que automatizan procesos.",
+      descripcion:
+        "Explora Ethereum y su uso para crear contratos inteligentes que automatizan procesos.",
       url: "https://ethereum.org/en/developers/docs/smart-contracts/",
-      youtubeVideoId: "GXfwABded7g"
+      youtubeVideoId: "GXfwABded7g",
     },
     {
       id: 4,
       titulo: "NFTs: Tokens No Fungibles",
-      descripcion: "Conoce qué son los NFTs, cómo funcionan y su impacto en la industria del arte y coleccionismo.",
+      descripcion:
+        "Conoce qué son los NFTs, cómo funcionan y su impacto en la industria del arte y coleccionismo.",
       url: "https://www.nftgamefreak.com/what-are-nfts/",
-      youtubeVideoId: "vluFUSMMHu4"
+      youtubeVideoId: "vluFUSMMHu4",
     },
     {
       id: 5,
       titulo: "DAOs: Organizaciones Autónomas Descentralizadas",
-      descripcion: "Entiende cómo las DAOs permiten tomar decisiones de manera descentralizada mediante contratos inteligentes.",
+      descripcion:
+        "Entiende cómo las DAOs permiten tomar decisiones de manera descentralizada mediante contratos inteligentes.",
       url: "https://www.coindesk.com/learn/what-is-a-dao-decentralized-autonomous-organization",
-      youtubeVideoId: "NDdBDevKyOQ"
+      youtubeVideoId: "NDdBDevKyOQ",
     },
     {
       id: 6,
       titulo: "Wallets de Criptomonedas",
-      descripcion: "Aprende a usar carteras digitales (wallets) para almacenar y gestionar tus activos en Web3.",
+      descripcion:
+        "Aprende a usar carteras digitales (wallets) para almacenar y gestionar tus activos en Web3.",
       url: "https://www.coinbase.com/learn/crypto-basics/what-is-a-crypto-wallet",
-      youtubeVideoId: "KtLvVtNazkY"
+      youtubeVideoId: "KtLvVtNazkY",
     },
     {
       id: 7,
       titulo: "DeFi: Finanzas Descentralizadas",
-      descripcion: "Explora el mundo de las finanzas descentralizadas (DeFi) y cómo se están revolucionando las finanzas tradicionales.",
+      descripcion:
+        "Explora el mundo de las finanzas descentralizadas (DeFi) y cómo se están revolucionando las finanzas tradicionales.",
       url: "https://www.defipulse.com/",
-      youtubeVideoId: "fYGutx4W7Ys"
+      youtubeVideoId: "fYGutx4W7Ys",
     },
     {
       id: 8,
       titulo: "Interoperabilidad en Web3",
-      descripcion: "Comprende cómo diferentes blockchains pueden trabajar juntas de manera fluida a través de la interoperabilidad.",
+      descripcion:
+        "Comprende cómo diferentes blockchains pueden trabajar juntas de manera fluida a través de la interoperabilidad.",
       url: "https://www.coindesk.com/learn/interoperability-in-blockchain",
-      youtubeVideoId: "AIU5K5l-GLU"
+      youtubeVideoId: "AIU5K5l-GLU",
     },
     {
       id: 9,
       titulo: "El Futuro de Web3",
-      descripcion: "¿Qué nos depara el futuro de Web3 y cómo afectará a nuestra interacción con Internet?",
+      descripcion:
+        "¿Qué nos depara el futuro de Web3 y cómo afectará a nuestra interacción con Internet?",
       url: "https://www.forbes.com/sites/forbestechcouncil/2021/06/08/web3-the-future-of-the-internet/",
-      youtubeVideoId: "P30UQ9cEYNE"
+      youtubeVideoId: "P30UQ9cEYNE",
     },
     {
       id: 10,
       titulo: "Web3 y la Privacidad del Usuario",
-      descripcion: "Descubre cómo Web3 puede ofrecer una mayor privacidad y control sobre los datos personales.",
+      descripcion:
+        "Descubre cómo Web3 puede ofrecer una mayor privacidad y control sobre los datos personales.",
       url: "https://www.coindesk.com/learn/what-is-web3-and-why-it-matters-to-your-privacy/",
-      youtubeVideoId: "n6i3gJd01lk"
-    }
+      youtubeVideoId: "n6i3gJd01lk",
+    },
   ];
-  
-  
+
   return (
     <div className="flex">
       {/* Panel Lateral */}
@@ -108,7 +125,11 @@ const TrazabilidadMinerales = () => {
             >
               <FaBook />
               <span>Conocimiento</span>
-              <span className={`ml-2 transform transition-transform ${conocimientoAbierto ? 'rotate-180' : ''}`}>
+              <span
+                className={`ml-2 transform transition-transform ${
+                  conocimientoAbierto ? "rotate-180" : ""
+                }`}
+              >
                 <FaChevronDown />
               </span>
             </button>
@@ -138,16 +159,16 @@ const TrazabilidadMinerales = () => {
 
       {/* Contenido Principal */}
       <div className="flex flex-col lg:ml-20 p-4 w-full">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">
-          Casos de uso
-        </h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">Videos</h1>
 
         {/* Cuerpo de la Página: Tarjetas */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {/* Mapeo de tarjetas */}
           {enlaces.map((enlace) => (
             <div key={enlace.id} className="bg-white p-4 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold text-gray-900">{enlace.titulo}</h3>
+              <h3 className="text-xl font-bold text-gray-900">
+                {enlace.titulo}
+              </h3>
               <p className="text-sm text-gray-600">{enlace.descripcion}</p>
               {/* <a href={enlace.url} className="text-indigo-600 hover:text-indigo-800 mt-2 inline-block">Ver más</a> */}
               {/* Si hay un video de YouTube, mostrar la miniatura */}
@@ -170,9 +191,7 @@ const TrazabilidadMinerales = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-indigo-600 hover:text-indigo-800"
-                    >
-                      Ver Video
-                    </a>
+                    ></a>
                   </p>
                 </div>
               )}
