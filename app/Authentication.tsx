@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup, User } from "firebase/auth";
 import UserPanel from "./Dashboard"; // Asegúrate de que la ruta sea correcta
-
+import imagen1 from "./img/imagen1.webp";
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -166,14 +166,17 @@ const LandingPage = () => {
     <h2 className="text-4xl font-bold mb-10">¿Por qué elegir CryptoDay?</h2>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
       <div className="p-6 bg-gray-800 rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300 ease-in-out">
+        <img src='https://cdn.prod.website-files.com/5eb1c51b903700f456ce7a7e/62d1a09e18d2b622764e748f_Gu%C3%ADa%20Web3%20-%20Portada%20general.png' alt="Tecnología de Vanguardia" className="mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-110"/>
         <h3 className="text-3xl font-bold mb-4">Tecnología de Vanguardia</h3>
         <p>Accede a materiales actualizados y aprende sobre las últimas tendencias en blockchain, contratos inteligentes y criptomonedas.</p>
       </div>
       <div className="p-6 bg-gray-800 rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300 ease-in-out">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdQ6zbvvpJMX5jxGaVLFiEFBBsxM9OgpoygA&s" alt="Aprende a tu Ritmo" className="mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-110"/>
         <h3 className="text-3xl font-bold mb-4">Aprende a tu Ritmo</h3>
         <p>Curso flexible que se adapta a tu tiempo, ideal para personas ocupadas que desean mejorar sus habilidades sin presiones.</p>
       </div>
       <div className="p-6 bg-gray-800 rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300 ease-in-out">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVbiWKtAofYEY1NsXSwKEPagMWtjdc2wdt9A&s" alt="Comunidad y Soporte" className="mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-110"/>
         <h3 className="text-3xl font-bold mb-4">Comunidad y Soporte</h3>
         <p>Únete a una comunidad de aprendices y expertos dispuestos a compartir conocimientos y resolver tus dudas.</p>
       </div>
