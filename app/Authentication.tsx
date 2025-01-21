@@ -68,7 +68,7 @@ const LandingPage = () => {
 
   {/* Hero Section */}
  
-< Carousel/>
+<Carousel/>
   {/* Features Section */}
   <section id="features" className="py-20 bg-black text-white">
   <div className="container mx-auto text-center">
