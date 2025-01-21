@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { User } from "firebase/auth";
 import Navigation from "./Navbar";
 import TrazabilidadMinerales from "./components/panel";
