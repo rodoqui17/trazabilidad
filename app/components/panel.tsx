@@ -124,7 +124,7 @@ const TrazabilidadMinerales = () => {
               className="flex items-center space-x-2"
             >
               <FaBook />
-              <span>Conocimiento</span>
+              <span>Recursos Web3</span>
               <span
                 className={`ml-2 transform transition-transform ${
                   conocimientoAbierto ? "rotate-180" : ""
