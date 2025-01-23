@@ -72,12 +72,12 @@ const LandingPage = () => {
   {/* Features Section */}
   <section id="features" className="py-20 bg-black text-white">
   <div className="container mx-auto text-center">
-    <h2 className="text-4xl font-bold mb-10">Aprende Web3 y Blockchain como un Experto</h2>
+    <h2 className="text-4xl font-bold mb-10">Aprende Web3, Blockchain y Critomonedas</h2>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
       <div className="p-6 bg-gray-800 rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300 ease-in-out">
         <img src='https://cdn.prod.website-files.com/5eb1c51b903700f456ce7a7e/62d1a09e18d2b622764e748f_Gu%C3%ADa%20Web3%20-%20Portada%20general.png' alt="Tecnología de Vanguardia" className="mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-110"/>
         <h3 className="text-3xl font-bold mb-4">Tecnología de Vanguardia</h3>
-        <p>Accede a materiales actualizados y aprende sobre las últimas tendencias en blockchain, contratos inteligentes y criptomonedas.</p>
+        <p>Accede a materiales actualizados y aprende sobre las últimas tendencias en Criptomonedas, aplicaciónes de la Tecnología Blockchain y Finanzas descentralizadas</p>
       </div>
       <div className="p-6 bg-gray-800 rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300 ease-in-out">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdQ6zbvvpJMX5jxGaVLFiEFBBsxM9OgpoygA&s" alt="Aprende a tu Ritmo" className="mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-110"/>
