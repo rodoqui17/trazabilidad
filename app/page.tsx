@@ -23,10 +23,10 @@ export default function Home() {
 }
 
 // Componentes adicionales
-function About() {
-  return <div>About Page</div>;
-}
+// function About() {
+//   return <div>About Page</div>;
+// }
 
-function Contact() {
-  return <div>Contact Page</div>;
-}
+// function Contact() {
+//   return <div>Contact Page</div>;
+// }
